@@ -16,10 +16,14 @@ module Facter
             private
 
             def check_docker_lxc
+              return unless Object.const_defined?('Facter::Resolvers::Linux::Containers')
+
               Facter::Resolvers::Linux::Containers.resolve(:vm)
             end
 
             def check_gce
+              return unless Object.const_defined?('Facter::Resolvers::Linux::DmiBios')
+
               bios_vendor = Facter::Resolvers::Linux::DmiBios.resolve(:bios_vendor)
               'gce' if bios_vendor&.include?('Google')
             end
@@ -61,6 +65,8 @@ module Facter
             end
 
             def check_other_facts
+              return unless Object.const_defined?('Facter::Resolvers::Linux::DmiBios')
+
               bios_vendor = Facter::Resolvers::Linux::DmiBios.resolve(:bios_vendor)
               return 'kvm' if bios_vendor&.include?('Amazon EC2')
 
