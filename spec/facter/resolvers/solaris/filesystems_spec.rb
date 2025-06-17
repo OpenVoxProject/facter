@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-describe Facter::Resolvers::Solaris::Filesystem do
-  subject(:filesystems_resolver) { Facter::Resolvers::Solaris::Filesystem }
+describe Facter::Resolvers::Solaris::Filesystems do
+  subject(:filesystems_resolver) { Facter::Resolvers::Solaris::Filesystems }
 
   let(:filesystems) { 'hsfs,nfs,pcfs,udfs,ufs' }
 

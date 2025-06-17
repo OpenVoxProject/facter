@@ -3,7 +3,7 @@
 module Facter
   module Resolvers
     module Solaris
-      class Filesystem < BaseResolver
+      class Filesystems < BaseResolver
         init_resolver
 
         class << self

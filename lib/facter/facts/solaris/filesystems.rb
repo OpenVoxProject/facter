@@ -6,7 +6,7 @@ module Facts
       FACT_NAME = 'filesystems'
 
       def call_the_resolver
-        fact_value = Facter::Resolvers::Solaris::Filesystem.resolve(:file_systems)
+        fact_value = Facter::Resolvers::Solaris::Filesystems.resolve(:file_systems)
         Facter::ResolvedFact.new(FACT_NAME, fact_value)
       end
     end

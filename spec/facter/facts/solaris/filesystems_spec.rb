@@ -7,7 +7,7 @@ describe Facts::Solaris::Filesystems do
     let(:files) { 'apfs,autofs,devfs' }
 
     before do
-      allow(Facter::Resolvers::Solaris::Filesystem).to \
+      allow(Facter::Resolvers::Solaris::Filesystems).to \
         receive(:resolve).with(:file_systems).and_return(files)
     end
 
