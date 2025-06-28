@@ -476,6 +476,7 @@ os_hierarchy.each do |os|
     require_relative '../../facts/linux/os/selinux/enabled'
     require_relative '../../facts/linux/os/selinux/enforced'
     require_relative '../../facts/linux/os/selinux/policy_version'
+    require_relative '../../facts/linux/os/support'
     require_relative '../../facts/linux/partitions'
     require_relative '../../facts/linux/path'
     require_relative '../../facts/linux/processor'
